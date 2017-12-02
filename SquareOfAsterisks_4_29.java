@@ -9,6 +9,8 @@ public class SquareOfAsterisks_4_29 {
 		System.out.print("Enter square side between 1 and 15: ");
 		int x = input.nextInt();
 		
+		System.out.println();
+		
 		while (x < 1 || x > 20) {
 			System.out.println("Error!");
 			System.out.print("Enter square side between 1 and 15: ");
