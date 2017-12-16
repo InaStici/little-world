@@ -19,14 +19,13 @@ public class FindTheSmallestValue_5_11 {
 		number = input.nextInt();
 		
 		while (counter < nrVal) {
-			
-			number = input.nextInt();
-			
+					
 			if (number < smallest) {
 				smallest = number;
 			} 
 			
 			counter +=1;
+			number = input.nextInt();
 		}
 		System.out.println();
 		
