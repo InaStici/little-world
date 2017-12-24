@@ -16,7 +16,7 @@ public class ParkingCharges_6_8 {
 		}
 		
 		double charge = chargePerStay(hours);
-		System.out.println("The parking charge is " + charge);
+		System.out.println("The parking charge is $" + charge);
 	}
 	
 	public static double chargePerStay(double x) {
