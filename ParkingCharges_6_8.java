@@ -9,6 +9,12 @@ public class ParkingCharges_6_8 {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter parking hours: ");
 		double hours = input.nextDouble();
+		
+		if (hours <= 0) {
+			System.out.println("Error! Please enter hours greater than zero");
+			 hours = input.nextDouble();
+		}
+		
 		double charge = chargePerStay(hours);
 		System.out.println("The parking charge is " + charge);
 	}
