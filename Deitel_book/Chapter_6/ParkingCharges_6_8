@@ -1,0 +1,50 @@
+package exercises;
+
+import java.util.Scanner;
+
+public class ParkingCharges_6_8 {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter parking hours: ");
+		double hours = input.nextDouble();
+		
+		while (hours <= 0 || hours > 24) {
+		if (hours <= 0) {
+			System.out.println("Error! Please enter hours greater than zero");
+			 hours = input.nextDouble();
+		}
+		
+		if (hours > 24) {
+			System.out.println("Error! Customer can not park for longer than 24 hours at a time");
+			 hours = input.nextDouble();
+		}
+		}
+		
+		System.out.println();
+		
+		System.out.println("Customer stayed " + hours + "hours");
+		
+		double charge = calculateCharges(hours);
+		System.out.println("The parking charge is $" + charge);
+	}
+
+	public static double calculateCharges(double x) {
+		double fee = 0;
+
+		if (x == 24) {
+			fee = 10.00;
+		}
+		
+		if (x <= 3) {
+			fee = 2.00;
+		}
+
+		if (x > 3 && x < 24) {
+			fee = 2.00 + (x - 3) * 0.50;
+		}
+
+		return fee;
+	}
+}
