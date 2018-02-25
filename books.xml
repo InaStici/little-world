@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+<department name = "Detective">
+<edition>
+<title>Inspector of the Dead</title>
+<author>David Morrell</author>
+<country>USA</country>
+<year>2015</year>
+</edition>
+
+<edition>
+<title>Ruler of the Night</title>
+<author>David Morrell</author>
+<country>USA</country>
+<year>2016</year>
+</edition>
+
+<edition>
+<title>The Adventures of Sherlok Holmes</title>
+<author>Arthur Conan Doyle</author>
+<country>UK</country>
+<year>1892</year>
+</edition>
+</department>
+
+<department name = "Romance">
+<edition>
+<title>Thoughtless</title>
+<author>S.C. Stephens</author>
+<country>USA</country>
+<year>1934</year>
+</edition>
+
+<edition>
+<title>The Siren</title>
+<author>Kiera Cass</author>
+<country>USA</country>
+<year>2016</year>
+</edition>
+
+<edition>
+<title>Pride and Prejudice</title>
+<author>Jane Austen</author>
+<country>USA</country>
+<year>1813</year>
+</edition>
+</department>
+
+<department name = "Motivation">
+<edition>
+<title>The 15 Invaluable Laws of Growth</title>
+<author>John C. Maxwell</author>
+<country>USA</country>
+<year>2012</year>
+</edition>
+
+<edition>
+<title>Thinking for a Change</title>
+<author>John C. Maxwell</author>
+<country>USA</country>
+<year>2003</year>
+</edition>
+
+<edition>
+<title>The Alchemist</title>
+<author>Paulo Coelho</author>
+<country>Brazil</country>
+<year>1988</year>
+</edition>
+</department>
+
+</books>
