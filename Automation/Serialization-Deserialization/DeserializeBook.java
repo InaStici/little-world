@@ -28,6 +28,7 @@ public class DeserializeBook {
 		System.out.println("Author: " + book.author);
 		System.out.println("ISBN: " + book.isbn);
 		System.out.println("Publishing House: " + book.publishingHouse);
+		System.out.println("Main characters: " + book.characters);
 	}
 
 }
