@@ -14,6 +14,10 @@ public class SerializeBook {
 		book.author = "David Morrell";
 		book.publishingHouse = "Morrell Enterprises, Inc.";
 		book.isbn = "978-5-389-10940-7";
+		book.characters.add("Thomas DeQuincy");
+		book.characters.add("Emily DeQuincy");
+		book.characters.add("Inspector Ryan");
+		book.characters.add("Sergeant Becker");
 
 		try {
 			FileOutputStream fileOut = new FileOutputStream("book1.ser");
