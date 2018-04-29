@@ -1,39 +1,39 @@
-package seleniumPractice;
+import java.io.File;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class WPlogin {
-	final static Logger log = Logger.getLogger(WPlogin.class);
+	@Test
+	public void test() throws Exception {
 
-	public static void main(String[] args) {
+		Logger log = Logger.getLogger("WPlogin");
+		PropertyConfigurator.configure(
+				"C:\\Users\\Inna\\eclipse-workspace\\mvnTest\\src\\main\\java\\seleniumPractice\\log4j.properties");
 		BasicConfigurator.configure();
 		WebDriver driver = new ChromeDriver();
-		Actions action = new Actions(driver);
 
-		driver.get("http://tim.webtic.info/tim14/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		driver.get(
+				"http://tim.webtic.info/tim14/wp-login.php?redirect_to=http%3A%2F%2Ftim.webtic.info%2Ftim14%2Fwp-admin%2F&reauth=1");
 		log.info("Welcome to WordPress!");
-		WebElement element = driver.findElement(By.xpath("//a[@href=\'http://tim.webtic.info/tim14/wp-login.php\']"));
-		element.click();
-
-		// Google's search is rendered dynamically with JavaScript.
-		// Wait for the page to load, timeout after 10 seconds
-		(new WebDriverWait(driver, 10)).until(new ExpectedCondition<String>() {
-			public String apply(WebDriver d) {
-				return d.getTitle();
-			}
-		});
 
 		WebElement login = driver.findElement(By.xpath("//input[@id='user_login']"));
 		login.sendKeys("in@stici");
 		log.info("Login inserted");
+		Thread.sleep(3000);
 		WebElement pwd = driver.findElement(By.xpath("//input[@id='user_pass']"));
 		pwd.sendKeys("Umidigiz1");
 		log.info("Password inserted");
@@ -45,11 +45,6 @@ public class WPlogin {
 		// Check the title of the page
 		System.out.println("Page title is: " + driver.getTitle());
 
-		WebElement admBarMyAcct = driver.findElement(By.xpath("//html//li[@id='wp-admin-bar-my-account']/a[1]"));
-		action.moveToElement(admBarMyAcct)
-				.moveToElement(driver.findElement(By.xpath("//li[@id='wp-admin-bar-logout']"))).click().build()
-				.perform();
-
 		(new WebDriverWait(driver, 10)).until(new ExpectedCondition<String>() {
 			public String apply(WebDriver d) {
 				return d.getTitle();
@@ -57,9 +52,18 @@ public class WPlogin {
 		});
 		System.out.println("Page title is: " + driver.getTitle());
 		log.info("Logged out successfully!");
-		// Close the browser
+		screen(driver);
+		Thread.sleep(3000);
 		driver.quit();
 
+	}
+
+	public void screen(WebDriver d) throws Exception {
+
+		File src = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
+
+		FileUtils.copyFile(src,
+				new File("D:\\Java\\!Automation\\Logs\\Screens\\" + this.getClass().getSimpleName() + ".png"));
 	}
 
 }
