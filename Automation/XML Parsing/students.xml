@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<students>
+	<student no="101">
+		<lastname>Frolov</lastname>
+		<firstname>Vlad</firstname>
+		<birthyear>1989</birthyear>
+		<averagemark>9.60</averagemark>
+		<educprogramm domain="University">UTM</educprogramm>
+		<studprogramm faculty="Specialization">Telecommunications</studprogramm>
+		<address>
+			<country>Moldova</country>
+			<city>Soroca</city>
+			<contacts>
+				<mobilephone>123456789</mobilephone>
+				<deskphone>444555</deskphone>
+			</contacts>
+		</address>
+	</student>
+	
+	<student no="102">
+		<lastname>Stici</lastname>
+		<firstname>Ina</firstname>
+		<birthyear>1994</birthyear>
+		<averagemark>9.79</averagemark>
+		<educprogramm domain="University">USM</educprogramm>
+		<studprogramm faculty="Specialization">IT</studprogramm>
+		<address>
+			<country>Moldova</country>
+			<city>Riscani</city>
+			<contacts>
+				<mobilephone>987654321</mobilephone>
+				<deskphone>888999</deskphone>
+			</contacts>
+		</address>
+	</student>
+	
+	<student no="103">
+		<lastname>Savitchii</lastname>
+		<firstname>Maxim</firstname>
+		<birthyear>1991</birthyear>
+		<averagemark>9.99999</averagemark>
+		<educprogramm domain="University">UTM</educprogramm>
+		<studprogramm faculty="Specialization">Anime</studprogramm>
+		<address>
+			<country>Moldova</country>
+			<city>Cricova</city>
+			<contacts>
+				<mobilephone>321654987</mobilephone>
+				<deskphone>777888</deskphone>
+			</contacts>
+		</address>
+	</student>
+</students>
